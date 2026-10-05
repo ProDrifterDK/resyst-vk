@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="lab" data-shape="soft" data-cap="raised" data-press="sink" data-font="brand" data-density="normal" data-sub="on">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resyst VK</title>
+<link rel="stylesheet" href="assets/css/vk.css">
+</head>
+<body>
+  <div id="kb" role="group" aria-label="Teclado virtual Resyst"></div>
+
+  <div id="suggest" role="listbox" aria-label="Sugerencias de palabra"></div>
+  <div id="compose" hidden role="group" aria-label="Edición con el teclado">
+    <span class="c-label" id="cLabel">Texto</span>
+    <div class="c-field" id="cField" role="textbox" aria-live="polite" aria-label="Valor en edición"></div>
+    <button type="button" id="cSuper" hidden aria-pressed="false" title="Añadir Super (tecla Windows) al próximo atajo">❖</button>
+    <button type="button" id="cBack" title="Borrar el último" aria-label="Borrar el último">⌫</button>
+    <button type="button" id="cCancel" title="Cancelar" aria-label="Cancelar edición">✕</button>
+    <button type="button" id="cOk" class="ok" title="Listo" aria-label="Confirmar">✓</button>
+  </div>
+
+  <footer id="bar">
+    <button id="grip" type="button" title="Arrastrar para mover el teclado" aria-label="Mover el teclado">⠿</button>
+    <span id="dot" aria-hidden="true"></span>
+    <span id="stat" role="status" aria-live="polite">conectando…</span>
+    <span id="leds" aria-hidden="true"></span>
+    <span id="chips" role="status" aria-live="polite" aria-label="modificadores activos"></span>
+    <span id="msg" role="alert"></span>
+    <span id="spring"></span>
+    <button id="btnProfile" class="barbtn" type="button" aria-haspopup="menu" aria-expanded="false" title="Perfil activo">
+      <span class="pi">☾</span><span class="pn">Noche</span><span class="auto" hidden>AUTO</span>
+    </button>
+    <button id="btnMacros" class="barbtn" type="button" title="Macros y textos" aria-label="Abrir macros y textos">⌘</button>
+    <button id="btnEmoji" class="barbtn" type="button" title="Emojis" aria-label="Abrir selector de emojis">☺</button>
+    <button id="btnCfg" class="barbtn" type="button" title="Personalizar" aria-label="Abrir personalización">⚙</button>
+    <span id="brand" aria-hidden="true">✦ RESYST VK</span>
+  </footer>
+
+  <div id="profMenu" role="menu" aria-label="Perfiles" hidden></div>
+
+  <div id="sheetWrap" class="overlay" hidden>
+    <div id="sheet" class="panel" role="dialog" aria-modal="true" aria-label="Personalización de Resyst VK">
+      <div class="panel-head">
+        <h2>✦ Personalizar</h2>
+        <span class="sub" id="sheetSub"></span>
+        <button class="x" type="button" aria-label="Cerrar personalización">✕</button>
+      </div>
+      <div class="body">
+        <nav class="rail" role="tablist" aria-label="Secciones" id="sheetRail"></nav>
+        <div class="content" id="sheetContent" role="tabpanel"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="macroWrap" class="overlay" hidden>
+    <div id="macroPanel" class="panel" role="dialog" aria-modal="true" aria-label="Macros y textos">
+      <div class="panel-head">
+        <h2>⌘ Macros</h2>
+        <span class="sub" id="macroSub">toca para ejecutar · ★ fija en la fila personal</span>
+        <button class="x" type="button" aria-label="Cerrar macros">✕</button>
+      </div>
+      <div id="macroBody" style="flex:1;min-height:0;display:flex;flex-direction:column"></div>
+    </div>
+  </div>
+
+  <div id="lpop" role="listbox" aria-label="Variantes" hidden></div>
+  <div id="emojiWrap" hidden></div>
+  <div id="toast" aria-live="assertive"></div>
+
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/variants.js"></script>
+  <script src="assets/js/lexicon.js"></script>
+  <script src="assets/js/suggest.js"></script>
+  <script src="assets/js/emoji.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/settings.js"></script>
+  <script src="assets/js/sound.js"></script>
+  <script src="assets/js/macros.js"></script>
+  <script src="assets/js/prefs-ui.js"></script>
+  <script src="assets/js/longpress.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
